@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+<title>{% block title %}Login Page{% endblock %} </title>
+{% block body %}
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/static/assets/design-14.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="100" loading="lazy">
+      </div>
+      <div class="col-md-4">
+        <h1>Login</h1>
+        <form action="" method="POST">
+          <div class="col-md-6">
+            <label>Username</label>
+            <input type="text" name="username" class="form-control" value={{request.form.username}}>
+          </div>
+          <div class="col-md-6">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" value={{request.form.password}}>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

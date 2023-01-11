@@ -1,0 +1,39 @@
+{% extends 'layout.html' %} 
+<title>{% block title %}Train Image{% endblock %} </title>
+{% block body %}
+<script async src="https://docs.opencv.org/master/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+<script>
+    function onOpenCvReady() {
+        // Access the video stream
+        navigator.mediaDevices.getUserMedia({video: true}).then(function(stream) {
+            document.getElementById('video').srcObject = stream;
+            setInterval(processVideo, 1000/30);
+        });
+    }
+
+    function processVideo() {
+        let src = cv.imread(video);
+        let dst = new cv.Mat();
+        cv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY);
+        cv.imshow('canvas', dst);
+        src.delete(); 
+        dst.delete();
+    }
+</script>
+
+<div class="row mt-5">
+        <div class="col-md-3 offset-lg-2">
+            <h3>Generate Dataset {{ prs }}</h3>
+            <hr>
+            <video id="video" autoplay width="400" height="400"></video>
+            <canvas id="canvas"></canvas>
+            </div>
+            <div class="row">
+                <div class="col-md-3 offset-sm-2">
+                    <a class="btn btn-primary btn-lg" href="{{ url_for('train_classifier', nbr=prs) }}"> Training </a>
+                </div>
+            </div>
+    </div>
+   
+
+{% endblock %}

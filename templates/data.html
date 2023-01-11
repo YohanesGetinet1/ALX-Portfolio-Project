@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Attendee Data
+{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg py-2 navbar-dark bg-primary shadow-sm">
+    <div class="container">
+        <a href="#" class="navbar-brand">
+          <!-- Logo Image -->
+          <img src="/static/assets/webcam.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+          <!-- Logo Text -->
+          <span class="font-weight-bold .text-success" >Faceattend</span>
+        </a>
+    </div>
+</nav>
+
+
+    <div class="row mt-5">
+        <div class="col-lg-8 offset-lg-2">
+            <h3>Attendee Data</h3>
+            <hr>
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="/dashboard" type="button" class="btn btn-primary btn-lg"><b>Add Attendee</b></a>
+                </div>
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-4">
+                    <a href="/video" type="button" class="btn btn-primary btn-lg"><b>Face Detect</b></a>
+                </div>
+            </div>
+
+            <br>
+            <table class="table" style="width: 80%">
+                <thead>
+                    <tr>
+                        <th>Attendee ID</th>
+                        <th>Attendee Name</th>
+                        <th>Attendee Filed</th>
+                        <th>Attendee Status</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                        <tr>
+                            <td>{{item[0]}}</td>
+                            <td>{{item[1]}}</td>
+                            <td>{{item[2]}}</td>
+                            <td>{{item[3]}}</td>
+                            <td>{{item[4]}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+{% endblock %}

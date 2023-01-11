@@ -1,0 +1,94 @@
+{% extends 'layout.html' %} 
+<title>{% block title %} Home{% endblock %} </title>
+
+
+{% block content1 %}
+    <body data-q-sc-loaded="true" data-new-gr-c-s-check-loaded="14.1091.0" data-gr-ext-installed="">
+
+      <main>
+        <h1 class="visually-hidden"></h1>
+        <div class="px-4 py-5 my-5 text-center">
+          <img class="d-block mx-auto mb-4" src="/static/assets/college.avif" alt="" width="672" height="380">
+          <h1 class="display-5 fw-bold">FaceAttend</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">FaceAttend is a simple and convenient way for universities to track student attendance. With our facial recognition technology, students can easily check in to their classes just by looking at the camera. No more paper sign-in sheets or awkward scanning of student IDs. FaceAttend makes attendance tracking quick and hassle-free for both students and professors.
+               Try it out today and see how easy it is to stay on top of attendance at your school.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Register now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="b-example-divider"></div>
+
+        <div class="b-example-divider"></div>
+
+        <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="/static/assets/design-14.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-5 fw-bold lh-1 mb-3">Eliminate Attendance Hassles with Face Recognition Technology</h1>
+              <p class="lead">A face recognition attendance system can greatly improve the efficiency and accuracy of tracking attendance. With this technology,
+                 there is no need for physical sign-in sheets or cards, making the process more convenient for both administrators and attendees.
+                Not only is it convenient, but it can also enhance security by ensuring that only authorized individuals are present in a particular location.</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="b-example-divider"></div>
+
+
+
+        <div class="b-example-divider"></div>
+
+        <div class="container my-5">
+          <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+              <h1 class="display-4 fw-bold lh-1">Upgrade Your Campus Life: Try Face Recognition</h1>
+              <p class="lead">Going green has never been easier – our face recognition website helps you ditch the plastic ID cards and reduce your carbon footprint.
+                And the convenience doesn't stop there – simply visit the site, snap a selfie, and use facial recognition to access campus buildings in seconds.
+                 Give it a try and see the benefits for yourself!</p>
+
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                <img class="rounded-lg-3" src="/static/assets/life.avif" alt="" width="520" height="420">
+            </div>
+          </div>
+        </div>
+
+        <div class="b-example-divider"></div>
+
+        <div class="bg-dark text-secondary px-4 py-5 text-center">
+          <div class="py-5">
+            <h1 class="display-5 fw-bold text-white">FaceAttend</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="fs-5 mb-4">This face recognition website was developed as part of a software engineering class offered ALX,
+               Which was designed to give students practical experience in developing real-world software projects.</p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold " onclick="location.href='https://www.alxafrica.com/'">ALX-website</button>
+                <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold " onclick="location.href='{{url_for('home')}}'">Back to Top</button>
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"></a>
+
+              </div>
+              <!-- footer Social Media Button with ALX logo -->
+            </div>
+
+          </div>
+          <img src="/static/assets/twitter.png" width="25" height="25" onclick="location.href='https://twitter.com/YohanesGetinet'">
+          <img src="/static/assets/linkedin.png" width="25" height="25" onclick="location.href='http://www.linkedin.com/in/yohanesgetinet'">
+          <img src="/static/assets/github.png" width="25" height="25" onclick="location.href='https://github.com/YohanesGetinet1'">
+              <br>
+              © 2023 SIRARA TECH, Inc
+        </div>
+        <div class="b-example-divider mb-0"></div>
+      </main>
+      <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+      </body>
+  
+      
+{% endblock %}
+    

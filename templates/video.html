@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+<title>{% block title %}Face detect{% endblock %} </title>
+<script async src="https://docs.opencv.org/master/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+{% block body %}
+<section class="py-1">
+    <div class="row mt-5">
+        <div class="col-md-7 offset-lg-2">
+            <img src="{{ url_for('video_feed') }}" width="100%" class="img-thumbnail">
+        </div>
+    </div>
+</section>
+
+{% endblock %}

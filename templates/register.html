@@ -1,0 +1,75 @@
+    {% extends 'layout.html' %}
+    <title> {% block title %}Register{% endblock %} </title>
+
+
+  <body>
+
+    {% include 'includes/_message.html'%}
+    <body data-q-sc-loaded="true" data-new-gr-c-s-check-loaded="14.1091.0" data-gr-ext-installed="">
+    
+     {% block body %}
+        <h1>Register</h1>
+        {% from "includes/_formhelpers.html" import render_field %}
+        <form class = "row g-3" method="POST" action="">
+            
+            <div class="col-md-6">
+                {{render_field(form.name,class="form-control",placeholder="Please Enter Your Full Name")}}
+            </div>
+
+            <div class="col-md-6">
+                {{render_field(form.email,class="form-control",placeholder="email@address.com")}}
+            </div>
+
+            <div class="col-md-6">
+                {{render_field(form.username,class="form-control",placeholder="@")}}
+            </div>
+
+            <div class="col-md-6">
+                {{render_field(form.password,class="form-control")}}
+            </div>
+
+            <div class="col-md-6">
+                {{render_field(form.confirm,class="form-control")}}
+            </div>
+            <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+        </form>
+        {%endblock%}
+        <div class="b-example-divider"></div>
+      
+        <div class="bg-dark text-secondary px-4 py-5 text-center">
+          <div class="py-5">
+            <h1 class="display-5 fw-bold text-white">FaceAttend</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="fs-5 mb-4">This face recognition website was developed as part of a software engineering class offered ALX, 
+               Which was designed to give students practical experience in developing real-world software projects.</p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold " onclick="location.href='https://www.alxafrica.com/'">ALX-website</button>
+                <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold " onclick="location.href='{{url_for('home')}}'">Back to Top</button>
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"></a>
+                
+              </div>
+              <!-- footer Social Media Button with ALX logo -->
+            </div>
+            
+          </div>
+          <img src="/static/assets/twitter.png" width="25" height="25" onclick="location.href='https://twitter.com/YohanesGetinet'" alt="twitter logo">
+          <img src="/static/assets/linkedin.png" width="25" height="25" onclick="location.href='http://www.linkedin.com/in/yohanesgetinet'" alt="linkedin logo">
+          <img src="/static/assets/github.png" width="25" height="25" onclick="location.href='https://github.com/YohanesGetinet1'" alt="github logo">
+              <br>
+              © 2023 SIRARA TECH, Inc
+        </div>
+      </body>
+    {% block content1 %}
+
+    {% endblock %}
+  </body>
+    
+    {% block content2 %}
+
+    {% endblock %}
+
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+

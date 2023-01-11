@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> {% block title %}About Us {% endblock %} </title>
+    {% include 'includes/_nav.html'%}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>FaceAttend</h1>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  
+</body>
+<p class="lead">
+    Our attendance tracking system uses the latest facial recognition technology to accurately and efficiently track attendance at events, meetings, and classes. 
+    With our system, there is no need for manual sign-in sheets or card scanners. Simply have attendees look into the camera and our system will automatically record their attendance. The system is easy to use and saves time and resources, making it a valuable tool for any organization looking to streamline their attendance tracking process.</p>
+
+
+<div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">FaceAttend</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4">This face recognition website was developed as part of a software engineering class offered ALX, 
+         Which was designed to give students practical experience in developing real-world software projects.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold " onclick="location.href='https://www.alxafrica.com/'">ALX-website</button>
+          <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold " onclick="location.href='{{url_for('home')}}'">Back to Top</button>
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"></a>
+          
+        </div>
+        <!-- footer Social Media Button with ALX logo -->
+      </div>
+      
+    </div>
+    <img src="static/assets/twitter.png" width="25" height="25" onclick="location.href='https://twitter.com/YohanesGetinet'">
+    <img src="static/assets/linkedin.png" width="25" height="25" onclick="location.href='http://www.linkedin.com/in/yohanesgetinet'">
+    <img src="static/assets/github.png" width="25" height="25" onclick="location.href='https://github.com/YohanesGetinet1'">
+        <br>
+        © 2023 SIRARA TECH, Inc
+  </div>
+</html>
+
+
